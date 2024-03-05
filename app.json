@@ -22,7 +22,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#fff"
-      }
+      },
+      "package": "com.britodev.openiareactnative"
     },
     "web": {
       "bundler": "metro",
@@ -39,6 +40,9 @@
     "extra": {
       "router": {
         "origin": false
+      },
+      "eas": {
+        "projectId": "1a4e98a3-ad8f-4465-a656-08acffdbc22d"
       }
     }
   }
