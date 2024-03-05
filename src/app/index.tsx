@@ -5,12 +5,11 @@ import Slider from '@react-native-community/slider';
 import { Picker } from '@react-native-picker/picker';
 
 const statusBarHeight = StatusBar.currentHeight;
-const KEY_OPEN_IA = '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'
+const KEY_OPEN_IA = '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'
 
 export default function App() {
   const [loading, setLoading] = useState(false);
   const [petList, setPetList] = useState('');
-
   const [formData, setFormData] = useState({
     idade: 18,
     quantidadePessoas: 1,
