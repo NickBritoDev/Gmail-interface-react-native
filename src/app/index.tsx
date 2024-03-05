@@ -5,7 +5,7 @@ import Slider from '@react-native-community/slider';
 import { Picker } from '@react-native-picker/picker';
 
 const statusBarHeight = StatusBar.currentHeight;
-const KEY_OPEN_IA = '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'
+const KEY_OPEN_IA = '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'
 
 export default function App() {
   const [loading, setLoading] = useState(false);
@@ -53,8 +53,11 @@ export default function App() {
     })
       .then((response) => response.json())
       .then((data) => {
-        setPetList(data.choices[0].message.content);
-      })
+        if (data.choices && data.choices[0] && data.choices[0].message) {
+          setPetList(data.choices[0].message.content);
+        } else {
+          console.error('Invalid data format:', data);
+        }      })
       .catch((error) => {
         console.error(error);
       })
